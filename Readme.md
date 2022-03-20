@@ -5,8 +5,8 @@ Actual game can be played [here](https://www.nytimes.com/games/wordle/index.html
 
 ## Game output
 
-Win output
 ![Output screenshot](Wordle/Extras/win.gif)
+Win output
 
-Lost output
 ![Output screenshot](Wordle/Extras/loose.gif)
+Lost output
