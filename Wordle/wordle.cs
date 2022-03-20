@@ -29,10 +29,17 @@ namespace Wordle
                 {
                     tries++;
                     print(input);
+                    Console.SetCursorPosition(0, 10);
+                    Console.WriteLine("                               ");
+                    Console.SetCursorPosition(0, tries + 2);
                 }
                 else
                 {
+                    Console.SetCursorPosition(0, 10);
                     Console.WriteLine("Enter a valid five letter word");
+                    Console.SetCursorPosition(0, tries+2);
+                    Console.WriteLine("                               ");
+                    Console.SetCursorPosition(0, tries + 2);
                 }
             }
             if(tries < 6)
@@ -41,14 +48,15 @@ namespace Wordle
             }
             else
             {
-                Console.WriteLine($"You Loost😞 \nThe word was:{word}");
+                Console.WriteLine($"You Lost😞 \nThe word was:{word}");
             }
         }
 
         public void start()
         {
             initialise();
-            Console.WriteLine("Enter a five letter valid word");
+            
+            Console.WriteLine("Enter a five letter word");
             progress();
         }
 
@@ -100,7 +108,7 @@ namespace Wordle
                 words.Add(line.ToUpperInvariant());
             }
             this.word = words[random.Next(words.Count)].ToUpperInvariant();
-            Console.WriteLine($"Solution word is: {word} (for testing purpose only)");
+            //Console.WriteLine($"Solution word is: {word} (for testing purpose only)");
         }
     }
 }
